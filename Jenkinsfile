@@ -21,7 +21,14 @@ node {
 		docker.withRegistry('https://registry.hub.docker.com', 'docker-login') {
 			app.push("${env.BUILD_NUMBER}")
 			app.push("latest")
-			sh 'echo "URL: http://localhost:8000"'
 		}
 	}
+
+	stage('Start image') {
+		script {
+                	DOCKER_ID=`docker images | grep -E '^azagramac/helloworld-node.*latest' | awk -e '{print $3}'`
+			docker run -dtp 8000:8000 --name webapp azagramac/helloworld-node
+			echo "ID Image: $DOCKER_ID"
+		}		
+        }
 }
