@@ -21,6 +21,7 @@ node {
 		docker.withRegistry('https://registry.hub.docker.com', 'docker-login') {
 			app.push("${env.BUILD_NUMBER}")
 			app.push("latest")
+			sh 'echo "URL: http://localhost:8000"'
 		}
 	}
 }
