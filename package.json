@@ -18,11 +18,6 @@
 		"node",
                 "docker",
                 "dockerfile"
-		"animate",
-		"animation",
-		"css",
-		"svg",
-		"javascript"
 	],
 
 	"author": "jose@azagra.me"
