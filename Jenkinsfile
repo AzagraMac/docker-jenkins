@@ -8,7 +8,7 @@ node {
 	}
 
 	stage('Build image') {
-		app = docker.build("AzagraMac/docker-jenkins")
+		app = docker.build("azagramac/helloworld-node")
 	}
 
 	stage('Test image') {
