@@ -1,25 +1,37 @@
 {
 	"name": "hello-world",
-	"version": "1.0.0",
+	"version": "1.0",
 	"description": "Hello World HTTP server",
 	"main": "app.js",
 	
-	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1",
-		"start": "node app.js"
-  	},
-
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/AzagraMac/docker-jenkins"
 	},
 
+	"scripts": {
+                "test": "echo \"Error: no test specified\" && exit 1",
+                "start": "node app.js"
+        },
+  
 	"keywords": [
 		"node",
-		"docker",
-		"dockerfile"
+                "docker",
+                "dockerfile"
+		"animate",
+		"animation",
+		"css",
+		"svg",
+		"javascript"
 	],
 
-	"author": "jose@azagra.me",
-	"license": "GPL"
+	"author": "AzagraMac <jose@azagra.me>",
+	"license": "GPL",
+
+	"bugs": {
+		"url": "https://github.com/AzagraMac/docker-jenkins/issues"
+	},
+
+	"homepage": "https://github.com/AzagraMac/docker-jenkins",
+	"files": ["app.js"]
 }
