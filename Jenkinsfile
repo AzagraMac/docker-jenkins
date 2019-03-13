@@ -27,10 +27,9 @@ node {
 	stage('Start image') {
 		steps {
 			script {
-				#DOCKER_ID=$(docker images | grep -E 'azagramac/helloworld-node.*latest' | awk -e '{print $3}')
-				#DOCKER_ID=`docker images | grep -E '^azagramac/helloworld-node.*latest' | awk -e '{print \$3}'`
-				docker run -dtp 8000:8000 --name webapp azagramac/helloworld-node
-				#echo "ID Image: $DOCKER_ID"
+				DOCKER_ID=$(docker images | grep -E 'azagramac/helloworld-node.*latest' | awk -e '{print $3}')
+				sh 'docker run -dtp 8000:8000 --name webapp azagramac/helloworld-node'
+				echo "ID Image: $DOCKER_ID"
 			}
 		}			
         }
