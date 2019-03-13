@@ -2,6 +2,9 @@ var http = require('http');
 var server = http.createServer(function (request, response) {
          response.writeHead(200, {"Content-Type": "text/plain"});
                  response.end("Hello World!\n");
+
+});
+
 // logic
 // =====
 
@@ -431,8 +434,6 @@ export const stop = elements => {
   });
   return nodes;
 };
-
-});
 
 // listen on localhost:8000
 server.listen(8000);
